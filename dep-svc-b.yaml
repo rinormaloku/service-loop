@@ -11,7 +11,7 @@ spec:
         app: service-b
     spec:
       containers:
-      - image: rinormaloku/service-loop:2
+      - image: rinormaloku/service-loop
         name:  svc-b
         env:
         - name: SERVICE_NAME

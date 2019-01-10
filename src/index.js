@@ -15,8 +15,8 @@ app.get('/', (req, res) => {
             res.send(`${process.env.SERVICE_NAME} -> ${response.data}`);
         })
         .catch(error => {
-            console.log(`Request to ${process.env.ECHO_SVC}`)
-            res.send(error);
+            console.log(`Request to ${process.env.ECHO_SVC} failed!`)
+            res.status(500).send({ error: `Request to ${process.env.ECHO_SVC} failed!` })
         });
 })
 
